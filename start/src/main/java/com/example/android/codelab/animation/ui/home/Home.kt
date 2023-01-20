@@ -103,6 +103,8 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
+import kotlin.math.roundToInt
+import kotlin.math.roundToLong
 
 private enum class TabPage {
     Home, Work
@@ -693,7 +695,7 @@ private fun Modifier.swipeToDismiss(
         .offset {
             // TODO 6-7: Use the animating offset value here.
 
-            IntOffset(IntOffset(offsetX.value.roundToInt()), 0)
+            IntOffset((offsetX.value.roundToInt()), 0)
         }
 }
 
